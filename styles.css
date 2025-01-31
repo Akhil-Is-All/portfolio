@@ -35,35 +35,36 @@ body.light-mode nav {
     background-color: rgba(245, 247, 250, 0.9);
 }
 
-nav ul {
+.left {
+    font-size: 1.5rem;
+    color: #bb86fc;
+}
+
+/* Navbar Links */
+.nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
 }
 
-nav ul li {
-    list-style: none;
+.nav-links li {
     margin: 0 23px;
 }
 
-nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: #ffffff;
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
-body.light-mode nav ul li a {
+body.light-mode .nav-links li a {
     color: #333333;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #bb86fc;
     font-size: 1.1rem;
-}
-
-.left {
-    font-size: 1.5rem;
-    color: #bb86fc;
 }
 
 /* Dark/Light Toggle in Navbar */
@@ -82,14 +83,56 @@ body.light-mode .theme-toggle {
     color: #6200ea;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #bb86fc;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        height: calc(100vh - 80px);
+        width: 100%;
+        background-color: rgba(15, 12, 41, 0.9);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    body.light-mode .nav-links {
+        background-color: rgba(245, 247, 250, 0.9);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+}
+
 /* Home Section */
 .firstsection {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 85px 0;
-    /* min-height: 100vh;
-    padding: 0 20px; */
+    /* min-height: 100vh; */
+    /* padding: 0 20px; */
 }
 
 .firstsection>div {
@@ -369,30 +412,4 @@ body.light-mode .social-icons a {
 
 body.light-mode .footer-rights {
     color: #666666;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .firstsection {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .firstsection>div {
-        width: 100%;
-    }
-
-    .rightsection img {
-        width: 100%;
-    }
-
-    .project-container {
-        grid-template-columns: 1fr;
-    }
-
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 }

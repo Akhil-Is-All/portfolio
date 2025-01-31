@@ -19,6 +19,14 @@ themeToggle.addEventListener('click', () => {
     themeToggle.querySelector('i').classList.toggle('fa-moon', !isLightMode);
 });
 
+// Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
 // Typing Effect
 var typed = new Typed('#element', {
     strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
