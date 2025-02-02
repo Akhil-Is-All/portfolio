@@ -28,6 +28,7 @@ hamburger.addEventListener('click', () => {
 });
 
 // Animate progress bars when skills section is in view
+// Animate progress bars when skills section is in view
 const progressBars = document.querySelectorAll('.progress');
 
 const animateProgressBars = () => {
@@ -52,7 +53,6 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(skillsSection);
-
 // Typing Effect
 var typed = new Typed('#element', {
     strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],

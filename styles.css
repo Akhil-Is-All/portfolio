@@ -275,12 +275,32 @@ body.light-mode .skill-card {
 
 .skill-icon {
     font-size: 40px;
-    color: #bb86fc;
     margin-bottom: 10px;
 }
 
-body.light-mode .skill-icon {
-    color: #6200ea;
+/* Default colors for skill icons */
+.fa-html5 {
+    color: #e34c26; /* HTML orange */
+}
+
+.fa-css3-alt {
+    color: #264de4; /* CSS blue */
+}
+
+.fa-js {
+    color: #f0db4f; /* JavaScript yellow */
+}
+
+.fa-react {
+    color: #61dbfb; /* React blue */
+}
+
+.fa-node {
+    color: #68a063; /* Node.js green */
+}
+
+.fa-python {
+    color: #3776ab; /* Python blue */
 }
 
 .skill-card h3 {
@@ -317,11 +337,55 @@ body.light-mode .progress {
     background-color: #6200ea;
 }
 
+.progress-text {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 12px;
+    color: #bb86fc;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.light-mode .progress-text {
+    color: #6200ea;
+}
+
+.progress-bar:hover .progress-text {
+    opacity: 1;
+}
+
 .skill-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 30px 0;
+    }
 
+    .skills-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 15px;
+    }
+
+    .skill-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .skill-icon {
+        font-size: 30px;
+    }
+}
+
+/* project section */
 .project-card {
     background: #1a1a2e;
     border-radius: 10px;
@@ -539,31 +603,7 @@ body.light-mode .footer-rights {
         font-size: 1rem;
     }
 
-    @media (max-width: 768px) {
-        .skills-section {
-            padding: 30px 0;
-        }
     
-        .skills-section h1 {
-            font-size: 1.8rem;
-        }
-    
-        .skills-container {
-            grid-template-columns: 1fr;
-        }
-    
-        .skill-card {
-            padding: 15px;
-        }
-    
-        .skill-card h3 {
-            font-size: 1.2rem;
-        }
-    
-        .skill-icon {
-            font-size: 30px;
-        }
-    }
     
     /* Projects Section */
     .project-container {
