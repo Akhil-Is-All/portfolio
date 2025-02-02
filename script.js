@@ -27,6 +27,32 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+// Animate progress bars when skills section is in view
+const progressBars = document.querySelectorAll('.progress');
+
+const animateProgressBars = () => {
+    progressBars.forEach(progress => {
+        const progressValue = progress.getAttribute('data-progress');
+        progress.style.width = `${progressValue}%`;
+    });
+};
+
+const skillsSection = document.querySelector('.skills-section');
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateProgressBars();
+                observer.unobserve(skillsSection); // Stop observing after animation
+            }
+        });
+    },
+    { threshold: 0.5 } // Trigger when 50% of the section is visible
+);
+
+observer.observe(skillsSection);
+
 // Typing Effect
 var typed = new Typed('#element', {
     strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
