@@ -195,10 +195,12 @@
       <section class="contact-section" id="contact">
         <hr />
         <h1>Contact Me</h1>
-        <form class="contact-form" id="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form" >
+          
+          <input type="hidden" name="access_key" value="1e995ce9-0a30-4b42-a3a8-7f77bd8f7d88">
+          <input type="text" placeholder="Your Name" name="name" required />
+          <input type="email" placeholder="Your Email" name="email" required />
+          <textarea placeholder="Your Message" rows="5" name="Message" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
       </section>
@@ -220,10 +222,10 @@
           <h3>Follow Me</h3>
           <ul class="social-icons">
             <li>
-              <a href="https://github.com"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/Akhil-Is-All"><i class="fab fa-github"></i></a>
             </li>
             <li>
-              <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/akhil-singh-a6bb80258/"><i class="fab fa-linkedin"></i></a>
             </li>
             <li>
               <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
