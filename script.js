@@ -55,7 +55,7 @@ const observer = new IntersectionObserver(
 observer.observe(skillsSection);
 // Typing Effect
 var typed = new Typed('#element', {
-    strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
+    strings: ['Web Developer', 'Digital Marketer', 'Web Designer', 'Video Editor'],
     typeSpeed: 50,
     loop: true
 });
